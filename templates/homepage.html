@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <title>Siqi's Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+
+<body>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+<h1>Welcome to Siqi's Calculator</h1>
+
+<h2>Instruction:</h2>
+<h3>This is a simple calculator. You can perform basic calculations, such as adding, subtracting, multiplying, dividing and modulo operations, between any two numbers x and y. The number can be an integer or a decimal.</h3>
+
+<h3>Note: valid operators are +, -, *, / and %.</h3><br>
+
+
+<form action='' method="POST">
+
+x: <input type=text name='input1'>
+operator: <input type=text name='operator'>
+y: <input type=text name='input2'><br>
+
+<input type=submit name='submit' value=Compute><br><br><br>
+
+{% if result != None %}
+Output: {{x}}{{operator}}{{y}}= {{result}}
+{% endif %}
+
+</form>
+
+</body>
+
+</html>
+
